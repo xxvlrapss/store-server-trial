@@ -2,26 +2,24 @@
 	<thead>
 		<tr>
 			<th>No.</th>
-			<th>Nama koin</th>
-			<th>Jumlah koin</th>
-			<th>Harga koin</th>
+			<th>Nama pemilik</th>
+			<th>Nama bank</th>
+			<th>Nomor rekening</th>
 			<th>Aksi</th>
 		</tr>
 	</thead>
 	<tbody>
-		<% for(let i = 0; i < nominal.length; i++){ %>
+		<% for(let i = 0; i < bank.length; i++){ %>
 		<tr>
 			<td><%= i + 1 %></td>
-			<td><%= nominal[i].coinName %></td>
-			<td><%= nominal[i].coinQuantity %></td>
-			<td><%= nominal[i].price %></td>
+			<td><%= bank[i].name %></td>
+			<td><%= bank[i].nameBank %></td>
+			<td><%= bank[i].noRekening %></td>
 			<td>
 				<form
-					action="/nominal/delete/<%= nominal[i]._id %>?_method=DELETE"
+					action="/bank/delete/<%= bank[i]._id %>?_method=DELETE"
 					method="POST">
-					<a
-						href="/nominal/edit/<%= nominal[i]._id %>"
-						class="btn btn-info btn-sm">
+					<a href="/bank/edit/<%= bank[i]._id %>" class="btn btn-info btn-sm">
 						<i class="fas fa-pencil-alt"></i>
 						Ubah
 					</a>
