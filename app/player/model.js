@@ -38,13 +38,14 @@ let playerSchema = mongoose.Schema(
 			default: 'Y',
 		},
 		avatar: { type: String },
-		filename: { type: String },
+		fileName: { type: String },
 		phoneNumber: {
 			type: String,
-			require: [true, 'nomor telepon harus diisi'],
-			maxlength: [13, 'panjang nomor telepon harus antara 9 - 13 karakter'],
-			minlength: [9, 'panjang nomor telepon harus antara 9 - 13 karakter'],
+			require: [true, 'nomor telpon harus diisi'],
+			maxlength: [13, 'panjang nomor telpon harus antara 9 - 13 karakter'],
+			minlength: [9, 'panjang nomor telpon harus antara 9 - 13 karakter'],
 		},
+
 		favorite: {
 			type: mongoose.Schema.Types.ObjectId,
 			ref: 'Category',
