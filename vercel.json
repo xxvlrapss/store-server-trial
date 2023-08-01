@@ -1,16 +1,4 @@
 {
-	"version": 2,
-	"builds": [
-		{
-			"buildCommand": "next build",
-			"start": "node ./bin/www",
-			"dev": "env-cmd -f ./.env.local nodemon ./bin/www",
-			"pro": "env-cmd -f ./.env nodemon ./bin/www",
-			"config": {
-				"includeFiles": ["db.json"]
-			}
-		}
-	],
 	"routes": [
 		{
 			"src": "/(.*)",
