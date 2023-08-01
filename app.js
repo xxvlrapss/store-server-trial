@@ -59,7 +59,6 @@ app.use('/transaction', transactionRouter)
 // api
 app.use(`${URL}/players`, playerRouter)
 app.use(`${URL}/auth`, authRouter)
-
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
 	next(createError(404))

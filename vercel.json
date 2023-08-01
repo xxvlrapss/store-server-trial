@@ -1,0 +1,19 @@
+{
+	"version": 2,
+	"builds": [
+		{
+			"start": "node ./bin/www",
+			"dev": "env-cmd -f ./.env.local nodemon ./bin/www",
+			"pro": "env-cmd -f ./.env nodemon ./bin/www",
+			"config": {
+				"includeFiles": ["db.json"]
+			}
+		}
+	],
+	"routes": [
+		{
+			"src": "/(.*)",
+			"dest": "app.js"
+		}
+	]
+}
